@@ -1,16 +1,22 @@
-package philosophyjava.examples.example3;
+package philosophyjava.tasks.task4;
 
-public class LinkedStack<T> {
-    private static class Node<U> {
-        U item;
-        Node<U> next;
+import philosophyjava.examples.example3.LinkedStack;
+
+/**
+ * (2) Удалите параметр-тип класса Node и измените остальной код LinkedStack.java так,
+ * чтобы показать, что для внутреннего класса доступны обобщенные параметры-типы внешнего класса.
+ */
+public class InnerClass<T> {
+    private static class Node<T> {
+        T item;
+        Node<T> next;
 
         public Node() {
             this.item = null;
             this.next = null;
         }
 
-        public Node(U item, Node<U> next) {
+        public Node(T item, Node<T> next) {
             this.item = item;
             this.next = next;
         }
@@ -31,8 +37,8 @@ public class LinkedStack<T> {
     }
 
     public static void main(String[] args) {
-        LinkedStack<String> lss = new LinkedStack<>();
-        for (String s: "Phasers on stun 1".split(" ")) {
+        InnerClass<String> lss = new InnerClass<>();
+        for (String s: "Phasers on stun".split(" ")) {
             lss.push(s);
             while ((s = lss.pop()) != null) {
                 System.out.println(s);
