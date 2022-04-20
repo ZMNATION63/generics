@@ -1,4 +1,6 @@
-package philosophyjava.examples.example5;
+package philosophyjava.examples.example5.coffee;
+
+import philosophyjava.examples.example5.Generator;
 
 import java.util.Iterator;
 import java.util.Random;
@@ -59,7 +61,7 @@ public class CoffeeGenerator implements Generator<Coffee>, Iterable<Coffee> {
             System.out.println(gen.next());
         }
 
-        for (Coffee coffee: gen) {
+        for (Coffee coffee: new CoffeeGenerator(5)) {
             System.out.println(coffee);
         }
     }

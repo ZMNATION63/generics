@@ -1,4 +1,4 @@
-package philosophyjava.examples.example5;
+package philosophyjava.examples.example5.coffee;
 
 public class Coffee {
     private static long counter = 0;
