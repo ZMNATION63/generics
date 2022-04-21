@@ -11,7 +11,7 @@ public class TupleTest {
             (new Amhibian(), "Hi", 007);
     }
 
-    static FourTuple<Vechicle, Amhibian, String, Integer> h () {
+    public static FourTuple<Vechicle, Amhibian, String, Integer> h() {
         return new FourTuple<Vechicle, Amhibian, String, Integer>
             (new Vechicle(), new Amhibian(), "Hello", 007);
     }
