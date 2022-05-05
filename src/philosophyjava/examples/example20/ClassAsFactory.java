@@ -1,7 +1,5 @@
 package philosophyjava.examples.example20;
 
-import org.omg.SendingContext.RunTime;
-
 public class ClassAsFactory<T> {
     T x;
 
