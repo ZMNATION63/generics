@@ -6,5 +6,5 @@ package philosophyjava.tasks;
  * 23. (1) Измените пример FactoryConstraint.java, чтобы метод create() получал аргумент.
  * 24. (3) Измените упражнение 21 так, чтобы объекты-фабрики хранились в Мар вместо Class<?>.
  */
-public class task17 {
+public class Task17 {
 }

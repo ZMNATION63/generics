@@ -1,6 +1,6 @@
-# generics
-
-
+# Chapter 15 Generics
+## Summary
+Summary of [chapter]()
 
 ## Getting started
 

@@ -6,5 +6,5 @@ package philosophyjava.tasks.tsak12;
  * Удастся ли вам изменить код Sets.java таким образом, чтобы он обрабатывал как общий случай интерфейса Set,
  * так и особый случай EnumSet, используя clone() вместо создания нового объекта HashSet?
  */
-public class task12 {
+public class Task12 {
 }
