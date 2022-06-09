@@ -492,6 +492,8 @@ public class Decoration {
     }
 }
 ```
+***
+# ПРИМЕРЫ 
 
 <p>I really like using Markdown.</p>
 Don't put tabs or spaces in front of your paragraphs.
@@ -531,3 +533,31 @@ This is really***very***important text.
 
 ***
 
+## Примеси и динамические заместители
+
+Динамический заместитель позволяет создать механизм, который более точно моделирует примеси, чем паттерн «Декоратор» 
+(за информацией о динамических замести- телях^уа обращайтесь к главе 14). С динамическим заместителем динамический тип полученного 
+класса образуется объединением всех смешиваемых типов.
+
+В направлении поддержки примесей Bjava ведется значительная работа, включающая создание как минимум одного расширения — языка JavaJam, 
+предназначенного специально для поддержки примесей.
+
+```java
+public class DynamicProxyMixin {
+    public static void main(String[] args) {
+        Object mixIn = MixinProxy.newInstance(
+            tuple(new BasicImp(), BasicImp.class),
+            tuple(new TimeStampedImp(), TimeStamped.class),
+            tuple(new SerialNumberedImp(), SerialNumbered.class)
+        );
+        Basic b = (Basic)mixIn;
+        TimeStamped timeStamped = (TimeStamped) mixIn;
+        SerialNumbered serialNumbered = (SerialNumbered) mixIn;
+
+        b.set("HELLO!");
+        System.out.println(b.get());
+        System.out.println(timeStamped.getStamp());
+        System.out.println(serialNumbered.getSerialNumbered());
+    }
+}
+```

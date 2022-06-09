@@ -1,8 +1,7 @@
 package philosophyjava.tasks.task26;
 
-import philosophyjava.examples.example33.checkedlist.Dog;
 import philosophyjava.examples.example5.coffee.Americano;
-import philosophyjava.examples.example5.coffee.Cappucchino;
+import philosophyjava.examples.example5.coffee.Cappuccino;
 import philosophyjava.examples.example5.coffee.Coffee;
 
 import java.util.ArrayList;
@@ -16,11 +15,11 @@ public class Task26 {
     @SuppressWarnings("unchecked")
     static void checkedType(List probablyCofee) {
         System.out.println(probablyCofee.getClass().getSimpleName());
-        probablyCofee.add(new Cappucchino());
+        probablyCofee.add(new Cappuccino());
     }
 
     public static void main(String[] args) {
-        List<Cappucchino> cappucchino = new ArrayList<>();
+        List<Cappuccino> cappucchino = new ArrayList<>();
         checkedType(cappucchino);
 
         List<Americano> americanos = Collections.checkedList(new ArrayList<>(), Americano.class);
